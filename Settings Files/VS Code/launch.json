@@ -1,0 +1,92 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python Debugger: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "vuejs: firefox",
+      "url": "http://localhost:8000",
+      "webRoot": "${workspaceFolder}/dist"
+    },
+    {
+      "name": "chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:8000",
+      "enableContentValidation": false,
+      "webRoot": "${workspaceFolder}/dist",
+      "pathMapping": {
+        "url": "/dist/",
+        "path": "${webRoot}/"
+      }
+    },
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "Debug Vite App port 3000 Firefox",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/src"
+    },
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "Debug Vite App port 5173 Firefox",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/src"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Debug Vite App port 3000",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/",
+      "runtimeArgs": ["--remote-debugging-port=3000"]
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Debug Vite App port 3000",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/src",
+      "sourceMapPathOverrides": {
+        "webpack:///./src/*": "${webRoot}/*"
+      },
+      "sourceMaps": true,
+      "runtimeArgs": ["--remote-debugging-port=3000"]
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Debug Vite App port 5173",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/frontend/src",
+      "sourceMapPathOverrides": {
+        "webpack:///./src/*": "${webRoot}/*"
+      },
+      "sourceMaps": true,
+      "runtimeArgs": ["--remote-debugging-port=5173"]
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Debug Vite App port 8000",
+      "url": "http://127.0.0.1:8000/",
+      "webRoot": "${workspaceFolder}/dist",
+      "sourceMapPathOverrides": {
+        "webpack:///./src/*": "${webRoot}/*"
+      },
+      "sourceMaps": true,
+      "runtimeArgs": ["--remote-debugging-port=8000"]
+    }
+  ]
+}
